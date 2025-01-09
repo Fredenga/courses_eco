@@ -18,10 +18,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Courses.Core\Courses.Core.csproj" />
     <ProjectReference Include="..\Courses.Data\Courses.Data.csproj" />
     <ProjectReference Include="..\Courses.Services\Courses.Services.csproj" />

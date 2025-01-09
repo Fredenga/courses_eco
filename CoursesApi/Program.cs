@@ -1,4 +1,6 @@
 using Courses.Core.Entities;
+using Courses.Data;
+using Courses.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -19,6 +21,9 @@ builder.Services.AddDbContextPool<CoursesDbContext>(options =>
         providerOptions.EnableRetryOnFailure();
     });
 });
+
+builder.Services.AddScoped<ICourseCategoryRepository, CourseCategoryRepository>();
+builder.Services.AddScoped<ICourseCategoryService, CourseCategoryService>();
 
 var app = builder.Build();
 
