@@ -22,6 +22,7 @@ builder.Services.AddDbContextPool<CoursesDbContext>(options =>
     });
 });
 
+
 builder.Services.AddScoped<ICourseCategoryRepository, CourseCategoryRepository>();
 builder.Services.AddScoped<ICourseCategoryService, CourseCategoryService>();
 builder.Services.AddScoped<ICourseRepository, CourseRepository>();
