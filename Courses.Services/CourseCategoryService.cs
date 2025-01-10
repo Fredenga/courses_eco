@@ -14,9 +14,11 @@ namespace Courses.Services
             return model!;
         }
 
-        public Task<List<CourseCategoryModel>> GetCourseCategoriesAsync()
+        public async Task<List<CourseCategoryModel>> GetCourseCategoriesAsync()
         {
-            throw new NotImplementedException();
+            var data = await categoryRepository.GetCourseCategoriesAsync();
+            var (_, models) = CourseCategoryMapper.ToCourseCategoryModel(null!, data);
+            return models;
         }
     }
 }
